@@ -1,14 +1,14 @@
 # Shiftregister-Lib
 An ATmega328P-Library for the use of Shiftregisters like the SN74HC595
 
-### Defines
+### Macros
     SHIFTREGISTER_LENGTH = 8  
     SHIFTREGISTER_PORT PORTB  //will only be defined if not already defined
 
 
 ### Structs
 
-**shiftregister**
+**shiftregister**constants and macros
 
     struct shiftregister{
       uint8_t serialDataPin;
@@ -22,8 +22,10 @@ An ATmega328P-Library for the use of Shiftregisters like the SN74HC595
 
     void array2Shiftregister(struct shiftregister *dataShiftregister, uint8_t data[SHIFTREGISTER_LENGTH]);
 
+
 Description  
 Writes the array into the shiftregister (array[0] = Q0, array[1] = Q1, ...)  
+Actually, array2Shiftregister is a macro, that calculates a byte out of the array and uses byte2Shiftregister to write the calculated byte to the shiftregister.
 
 **Byte2Shiftregister**  
 
