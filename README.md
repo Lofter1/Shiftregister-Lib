@@ -10,9 +10,9 @@ An ATmega328P-Library for the use of Shiftregisters like the SN74HC595
 ### Structs
 
   shiftregister  
-    uint8_t serialDataPin  
-    uint8_t shiftClockPin  
-    uint8_t storageClockPin  
+      uint8_t serialDataPin  
+      uint8_t shiftClockPin  
+      uint8_t storageClockPin  
 
 ### Functions
 
