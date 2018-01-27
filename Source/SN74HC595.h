@@ -1,8 +1,6 @@
 #ifndef SN74HC595_H
 #define SN74HC595_H
 
-#include<avr/io.h>
-
 #define SHIFTREGISTER_LENGTH 8
 
 #ifndef SHIFTREGISTER_PORT
