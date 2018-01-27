@@ -1,4 +1,4 @@
-constants and macros# Shiftregister-Lib
+# Shiftregister-Lib
 An ATmega328P-Library for the use of Shiftregisters like the SN74HC595
 
 ### Macros
@@ -19,7 +19,7 @@ An ATmega328P-Library for the use of Shiftregisters like the SN74HC595
 ### Functions
 
 **Array2Shiftregister**
-   
+
     void array2Shiftregister(struct shiftregister dataShiftregister, uint8_t data[SHIFTREGISTER_LENGTH]);
 
 Description  
