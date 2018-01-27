@@ -1,6 +1,6 @@
 #include <avr/io.h>
 #include <util/delay.h>
-#include <SN74HC595.h>
+#include "../Source/SN74HC595.h"
 
 #define SHIFTREGISTER1_DS PB0
 #define SHIFTREGISTER1_SHIFTCLOCK PB2

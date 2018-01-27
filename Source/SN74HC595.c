@@ -1,9 +1,8 @@
-#include <avr/io.h>
 #include "SN74HC595.h"
 
 #define BYTE_LENGTH 8
 
-void Array2Shiftregister(struct shiftregister dataShiftregister,
+/* void Array2Shiftregister(struct shiftregister dataShiftregister,
                                 uint8_t data[SHIFTREGISTER_LENGTH])
 {
   int8_t position;
@@ -25,9 +24,9 @@ void Array2Shiftregister(struct shiftregister dataShiftregister,
 
   SHIFTREGISTER_PORT |= (1 << dataShiftregister.storageClockPin);
   SHIFTREGISTER_PORT &= ~(1 << dataShiftregister.storageClockPin);
-}
+}*/
 
-void Byte2Shiftregister(struct shiftregister dataShiftregister,
+void byte2Shiftregister(struct shiftregister dataShiftregister,
                               uint8_t byte)
 {
   uint8_t bytePosition;
