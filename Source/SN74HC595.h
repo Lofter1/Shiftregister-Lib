@@ -28,9 +28,9 @@ struct shiftregister{
 //  char port;  //could be used to determine which port the shiftregister uses
 };
 
-extern void array2Shiftregister(struct shiftregister dataShiftregister,
-                                      uint8_t data[SHIFTREGISTER_LENGTH]);
-/*extern void byte2Shiftregister( struct shiftregister dataShiftregister,
-                                      uint8_t byte);*/
+/*extern void array2Shiftregister(struct shiftregister dataShiftregister,
+                                      uint8_t data[SHIFTREGISTER_LENGTH]);*/
+extern void byte2Shiftregister( struct shiftregister dataShiftregister,
+                                      uint8_t byte);
 
 #endif
