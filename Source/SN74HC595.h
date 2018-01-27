@@ -18,7 +18,7 @@ struct shiftregister{
 
 /*extern void array2Shiftregister(struct shiftregister dataShiftregister,
                                       uint8_t data[SHIFTREGISTER_LENGTH]);*/
-extern void byte2Shiftregister( struct shiftregister dataShiftregister,
+extern void byte2Shiftregister( struct shiftregister *dataShiftregister,
                                       uint8_t byte);
 
 #define array2byte(array) ( (array[7]) \
