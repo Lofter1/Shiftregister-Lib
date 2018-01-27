@@ -23,13 +23,13 @@ int main(){
   shiftregisterPORTB.storageClockPin = SHIFTREGISTER1_STORAGECLOCK;
 
   while(1){
-    array2Shiftregister(shiftregisterPORTB, scheme1);
+    array2Shiftregister(&shiftregisterPORTB, scheme1);
     _delay_ms(DELAY);
-    array2Shiftregister(shiftregisterPORTB, scheme2);
+    array2Shiftregister(&shiftregisterPORTB, scheme2);
     _delay_ms(DELAY);
-    byte2Shiftregister(shiftregisterPORTB, byteSchme1);
+    byte2Shiftregister(&shiftregisterPORTB, byteSchme1);
     _delay_ms(DELAY);
-    byte2Shiftregister(shiftregisterPORTB, byteSchme2);
+    byte2Shiftregister(&shiftregisterPORTB, byteSchme2);
     _delay_ms(DELAY);
   }
 
