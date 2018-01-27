@@ -33,4 +33,17 @@ struct shiftregister{
 extern void byte2Shiftregister( struct shiftregister dataShiftregister,
                                       uint8_t byte);
 
+#define array2byte(array) ( (array[7]) \
+                          + ((array[6]) << 1) \
+                          + ((array[5]) << 2) \
+                          + ((array[4]) << 3) \
+                          + ((array[3]) << 4) \
+                          + ((array[2]) << 5) \
+                          + ((array[1]) << 6) \
+                          + ((array[0]) << 7) )
+
+#define array2Shiftregister(s,a) byte2Shiftregister(s, array2byte(a))
+
+
+
 #endif
