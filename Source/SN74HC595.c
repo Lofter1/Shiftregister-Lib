@@ -1,31 +1,6 @@
-#include <avr/io.h>
 #include "SN74HC595.h"
 
 #define BYTE_LENGTH 8
-
-/* void Array2Shiftregister(struct shiftregister dataShiftregister,
-                                uint8_t data[SHIFTREGISTER_LENGTH])
-{
-  int8_t position;
-
-  SHIFTREGISTER_PORT &= ~(1 << dataShiftregister.storageClockPin);
-
-  for(position = SHIFTREGISTER_LENGTH - 1; position >= 0; position--){
-    SHIFTREGISTER_PORT &= ~(1 << dataShiftregister.shiftClockPin);
-
-    if(data[position] == 1){
-      SHIFTREGISTER_PORT |= (1 << dataShiftregister.serialDataPin);
-    }
-    else if(data[position] == 0){
-      SHIFTREGISTER_PORT &= ~(1 << dataShiftregister.serialDataPin);
-    }
-
-    SHIFTREGISTER_PORT |= (1 << dataShiftregister.shiftClockPin);
-  }
-
-  SHIFTREGISTER_PORT |= (1 << dataShiftregister.storageClockPin);
-  SHIFTREGISTER_PORT &= ~(1 << dataShiftregister.storageClockPin);
-}*/
 
 void byte2Shiftregister(struct shiftregister dataShiftregister,
                               uint8_t byte)
