@@ -3,9 +3,16 @@
 
 #include <avr/io.h>
 
-#ifndef SHIFTREGISTER_LENGTH
-  #define SHIFTREGISTER_LENGTH 8
+#ifndef SHIFTREGISTER_DP
+  #define SHIFTREGISTER_DP PB0
 #endif
+#ifndef SHIFTREGISTER_STCP
+  #define SHIFTREGISTER_STCP PB1
+#endif
+#ifndef SHIFTREGISTER_SHCP
+  #define SHIFTREGISTER_SHCP PB2
+#endif
+
 #ifndef SHIFTREGISTER_DDR
   #define SHIFTREGISTER_DDR DDRB
 #endif

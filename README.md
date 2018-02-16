@@ -4,11 +4,14 @@ An ATmega328P-Library for the use of Shiftregisters like the SN74HC595
 ## SN74HC595.h
 
 ### Macros
-    SHIFTREGISTER_LENGTH = 8  
-    SHIFTREGISTER_PORT PORTB  	will only be defined if not already defined  
-    SHIFTREGISTER_DP  		defines the dataport pin  
-    SHIFTREGISTER_STCP		defines the storageclock pin  
-    SHIFTREGISTER_SHCP		defines the shiftclock pin
+
+    SHIFTREGISTER_DDR		  the data directory, by default ddrb  
+    SHIFTREGISTER_PORT  	the port of the shiftregiser, by default portb  
+    SHIFTREGISTER_DP  		the dataport pin  
+    SHIFTREGISTER_STCP		the storageclock pin  
+    SHIFTREGISTER_SHCP		the shiftclock pin
+
+Remember that, if you want to change the values, you need to define the macros before including the header-file or instead change the values in the header itself.
 
 
 ### Functions
