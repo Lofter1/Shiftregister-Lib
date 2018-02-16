@@ -1,14 +1,8 @@
 # Shiftregister-Lib
 An ATmega328P-Library for the use of Shiftregisters like the SN74HC595
 
-<<<<<<< HEAD
+
 ## SN74HC595.h
-=======
-### Macros
-    SHIFTREGISTER_LENGTH = 8  
-    SHIFTREGISTER_PORT PORTB  //will only be defined if not already defined
-    SHIFTREGISTER_DDR  DDRB   //will only be defined if not already defined
->>>>>>> master
 
 ### Macros
 
