@@ -3,8 +3,6 @@
 
 #include <avr/io.h>
 
-#define SHIFTREGISTER_LENGTH 8
-#define BYTE_LENGTH 8
 //Define the Pins of the Shiftregister
 #define SHIFT_D0 0
 #define SHIFT_D1 1
@@ -32,6 +30,7 @@
 #define STORAGECLOCK_PIN PB2
 #endif
 
+extern uint8_t getShiftStatus();
 extern uint8_t setPin (uint8_t pin, uint8_t pinStatus);
 extern uint8_t byte2Shiftregister (uint8_t byte);
 
