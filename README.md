@@ -7,7 +7,7 @@ An ATmega328P-Library for the use of Shiftregisters like the SN74HC595
 ### Macros
 
     SHIFTREGISTER_DDR		  the data directory, by default ddrb  
-    SHIFTREGISTER_PORT  	the port of the shiftregiser, by default portb  
+    SHIFTREGISTER_PORT    the port of the shiftregiser, by default portb  
     SHIFTREGISTER_DP  		the dataport pin  
     SHIFTREGISTER_STCP		the storageclock pin  
     SHIFTREGISTER_SHCP		the shiftclock pin
