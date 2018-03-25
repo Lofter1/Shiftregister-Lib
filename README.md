@@ -10,9 +10,9 @@ Shiftregister wiring
 
     SHIFTREGISTER_DDR       the data directory, by default ddrb  
     SHIFTREGISTER_PORT      the port of the shiftregiser, by default portb  
-    SHIFTREGISTER_DP        the dataport pin  
-    SHIFTREGISTER_STCP      the storageclock pin  
-    SHIFTREGISTER_SHCP      the shiftclock pin
+    SERIALDATA_PIN          the dataport pin, by default PB0
+    SHIFTCLOCK_PIN          the shiftclock pin, by default PB1
+    STORAGECLOCK_PIN        the storageclock pin, by default PB2
 
 Shiftregister output-pins
 
