@@ -30,6 +30,8 @@
 #define STORAGECLOCK_PIN PB2
 #endif
 
+#define SHIFTREGISTER_LENGTH 8
+
 extern uint8_t getShiftStatus();
 extern uint8_t setPin (uint8_t pin, uint8_t pinStatus);
 extern uint8_t byte2Shiftregister (uint8_t byte);

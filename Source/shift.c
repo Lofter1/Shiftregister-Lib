@@ -1,6 +1,5 @@
 #include "shift.h"
 
-#define SHIFTREGISTER_LENGTH 8
 #define BYTE_LENGTH 8
 
 #define setShiftPin_High(pin) shiftStatus |= (1 << pin);
