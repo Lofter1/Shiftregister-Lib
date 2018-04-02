@@ -22,11 +22,13 @@
 
 #define SHIFTREGISTER_LENGTH 8
 
-//Functions 
+//Functions
 extern uint8_t getShiftStatus();
-extern uint8_t setPin (uint8_t pin, uint8_t pinStatus);
-extern uint8_t byte2Shiftregister (uint8_t byte);
+extern uint8_t setShiftregisterPin (uint8_t pin, uint8_t pinStatus);
+extern uint8_t setShiftregister (uint8_t byte);
 
+/*
+//Still needed?
 #define array2byte(array) ( (array[7]) \
                           + ((array[6]) << 1) \
                           + ((array[5]) << 2) \
@@ -35,6 +37,7 @@ extern uint8_t byte2Shiftregister (uint8_t byte);
                           + ((array[2]) << 5) \
                           + ((array[1]) << 6) \
                           + ((array[0]) << 7) )
-#define array2Shiftregister(array) byte2Shiftregister(array2byte(array))
+#define array2Shiftregister(array) setShiftregister(array2byte(array))
+*/
 
 #endif

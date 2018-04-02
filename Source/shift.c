@@ -7,14 +7,14 @@
 
 static uint8_t shiftStatus;
 
-uint8_t byte2Shiftregister (uint8_t byte)
+static void sendData()
 {
-  uint8_t bytePosition;
+  uint8_t position;
 
   SHIFTREGISTER_PORT &= ~(1 << STORAGECLOCK_PIN);
-  for(bytePosition = 0; bytePosition < BYTE_LENGTH; bytePosition++){
+  for(position = 0; position < BYTE_LENGTH; position++){
     SHIFTREGISTER_PORT &= ~(1 << SHIFTCLOCK_PIN);
-    if( (byte & (0b00000001 << bytePosition)) != 0){
+    if( (shiftStatus & (0b00000001 << position)) != 0){
       SHIFTREGISTER_PORT |= (1 << SERIALDATA_PIN);
     }
     else{
@@ -24,24 +24,30 @@ uint8_t byte2Shiftregister (uint8_t byte)
   }
   SHIFTREGISTER_PORT |= (1 << STORAGECLOCK_PIN);
   SHIFTREGISTER_PORT &= ~(1 << STORAGECLOCK_PIN);
+}
 
-  shiftStatus = byte;
+uint8_t setShiftregister (uint8_t data)
+{
+  shiftStatus = data;
+  sendData();
 
   return shiftStatus;
 }
 
-uint8_t setPin (uint8_t pin, uint8_t pinStatus){
+uint8_t setShiftregisterPin (uint8_t pin, uint8_t pinStatus)
+{
   if(pinStatus){
     setShiftPin_High(pin);
   }
   else {
     setShiftPin_Low(pin);
   }
-  byte2Shiftregister(shiftStatus);
+  sendData();
 
   return shiftStatus;
 }
 
-uint8_t getShiftStatus(){
+uint8_t getShiftStatus()
+{
   return shiftStatus;
 }

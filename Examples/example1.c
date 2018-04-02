@@ -8,8 +8,6 @@
 
 int main(){
   //Setup
-  uint8_t scheme1[SHIFTREGISTER_LENGTH] = {1,0,1,0,1,0,1,0};
-  uint8_t scheme2[SHIFTREGISTER_LENGTH] = {0,1,0,1,0,1,0,1};
   uint8_t byteSchme1 = 0b01100110;
   uint8_t byteSchme2 = 0b10011001;
   uint8_t status;
@@ -17,30 +15,26 @@ int main(){
   DDRB |= 0xFF;
 
   while(1){
-    status = array2Shiftregister(scheme1);
+    status = setShiftregister(byteSchme1);
     _delay_ms(DELAY);
-    status = array2Shiftregister(scheme2);
-    _delay_ms(DELAY);
-    status = byte2Shiftregister(byteSchme1);
-    _delay_ms(DELAY);
-    status = byte2Shiftregister(byteSchme2);
+    status = setShiftregister(byteSchme2);
     _delay_ms(DELAY);
 
-    status = setPin(D0, LOW);
+    status = setShiftregisterPin(D0, LOW);
     _delay_ms(DELAY);
-    status = setPin(D1, HIGH);
+    status = setShiftregisterPin(D1, HIGH);
     _delay_ms(DELAY);
-    status = setPin(D2, HIGH);
+    status = setShiftregisterPin(D2, HIGH);
     _delay_ms(DELAY);
-    status = setPin(D3, LOW);
+    status = setShiftregisterPin(D3, LOW);
     _delay_ms(DELAY);
-    status = setPin(D4, LOW);
+    status = setShiftregisterPin(D4, LOW);
     _delay_ms(DELAY);
-    status = setPin(D5, HIGH);
+    status = setShiftregisterPin(D5, HIGH);
     _delay_ms(DELAY);
-    status = setPin(D6, HIGH);
+    status = setShiftregisterPin(D6, HIGH);
     _delay_ms(DELAY);
-    status = setPin(D7, LOW);
+    status = setShiftregisterPin(D7, LOW);
     _delay_ms(DELAY);
 
   }
