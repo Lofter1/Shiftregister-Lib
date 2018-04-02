@@ -1,13 +1,5 @@
 #include <avr/io.h>
 #include <util/delay.h>
-
-#define SHIFTREGISTER_DDR DDRB
-#define SHIFTREGISTER_PORT PORTB
-
-#define SERIALDATA_PIN PB0
-#define SHIFTCLOCK_PIN PB2
-#define STORAGECLOCK_PIN PB1
-
 #include "../Source/shift.h"
 
 #define DELAY 1000

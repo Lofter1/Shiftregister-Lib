@@ -14,24 +14,15 @@
 #define SHIFT_D7 7
 
 //Define the connection of the Shiftregister
-#ifndef SHIFTREGISTER_DDR
 #define SHIFTREGISTER_DDR DDRB
-#endif
-#ifndef SHIFTREGISTER_PORT
 #define SHIFTREGISTER_PORT PORTB
-#endif
-#ifndef SERIALDATA_PIN
 #define SERIALDATA_PIN PB0
-#endif
-#ifndef SHIFTCLOCK_PIN
 #define SHIFTCLOCK_PIN PB1
-#endif
-#ifndef STORAGECLOCK_PIN
 #define STORAGECLOCK_PIN PB2
-#endif
 
 #define SHIFTREGISTER_LENGTH 8
 
+//Functions 
 extern uint8_t getShiftStatus();
 extern uint8_t setPin (uint8_t pin, uint8_t pinStatus);
 extern uint8_t byte2Shiftregister (uint8_t byte);
