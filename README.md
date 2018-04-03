@@ -28,32 +28,24 @@ Shiftregister output-pins
 
 ### Functions
 
-**Array2Shiftregister**
 
-    uint8_t array2Shiftregister(uint8_t data[SHIFTREGISTER_LENGTH]);
+**setShiftregister**  
 
-
-Description  
-Writes the array into the shiftregister (array[0] = Q0, array[1] = Q1, ...)  
-Actually, array2Shiftregister is a macro, that calculates a byte out of the array and uses byte2Shiftregister to write the calculated byte to and return the status from the shiftregister (see GetShiftStatus).
-
-**Byte2Shiftregister**  
-
-    uint8_t byte2Shiftregister(uint8_t byte);
+    uint8_t setShiftregister(uint8_t data);
 
 Description  
-Writes the byte (the uint8_t) into the shiftregister, starting with the right bit (Q7) going to the left bit (Q0) and returns the status of the shiftregister (see GetShiftStatus).
+Writes the byte (the uint8_t) into the shiftregister, starting with the right bit (Q7) going to the left bit (Q0) and returns the status of the shiftregister (see getShiftStatus).
 
-**GetShiftStatus**
+**getShiftStatus**
 
     uint8_t getShiftStatus();
-    
+
 Description
 Returns you the current status of the shiftregister as a byte (uint8_t), where the left bit is Q0 and the right bit Q7.
 
-**SetPin**
+**setPin**
 
     uint8_t setPin(uint8_t pin, uint8_t pinStatus);
-    
+
 Description
 In the status-variable of the shiftregister the pin is set to pinStatus (1 or 0) and the function then calls byte2shiftregister with the new status as the parameter. Finally, the function returns the new status (see GetShiftStatus).
