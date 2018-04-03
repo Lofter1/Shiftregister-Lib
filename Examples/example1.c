@@ -8,33 +8,32 @@
 
 int main(){
   //Setup
-  uint8_t byteSchme1 = 0b01100110;
+  uint8_t byteSchme1 = 0b11111111;
   uint8_t byteSchme2 = 0b10011001;
-  uint8_t status;
 
   DDRB |= 0xFF;
 
   while(1){
-    status = setShiftregister(byteSchme1);
+     setShiftregister(byteSchme1);
     _delay_ms(DELAY);
-    status = setShiftregister(byteSchme2);
+     setShiftregister(byteSchme2);
     _delay_ms(DELAY);
 
-    status = setShiftregisterPin(D0, LOW);
+     setShiftregisterPin(SHIFT_D0, LOW);
     _delay_ms(DELAY);
-    status = setShiftregisterPin(D1, HIGH);
+     setShiftregisterPin(SHIFT_D1, HIGH);
     _delay_ms(DELAY);
-    status = setShiftregisterPin(D2, HIGH);
+     setShiftregisterPin(SHIFT_D2, HIGH);
     _delay_ms(DELAY);
-    status = setShiftregisterPin(D3, LOW);
+     setShiftregisterPin(SHIFT_D3, LOW);
     _delay_ms(DELAY);
-    status = setShiftregisterPin(D4, LOW);
+     setShiftregisterPin(SHIFT_D4, LOW);
     _delay_ms(DELAY);
-    status = setShiftregisterPin(D5, HIGH);
+     setShiftregisterPin(SHIFT_D5, HIGH);
     _delay_ms(DELAY);
-    status = setShiftregisterPin(D6, HIGH);
+     setShiftregisterPin(SHIFT_D6, HIGH);
     _delay_ms(DELAY);
-    status = setShiftregisterPin(D7, LOW);
+     setShiftregisterPin(SHIFT_D7, LOW);
     _delay_ms(DELAY);
 
   }
