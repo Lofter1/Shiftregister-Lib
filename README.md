@@ -41,11 +41,11 @@ Writes the byte (the uint8_t) into the shiftregister, starting with the right bi
     uint8_t getShiftStatus();
 
 Description
-Returns you the current status of the shiftregister as a byte (uint8_t), where the left bit is Q0 and the right bit Q7.
+Returns the current status of the shiftregister as a byte (uint8_t), where the left bit is Q0 and the right bit Q7.
 
 **setPin**
 
     uint8_t setPin(uint8_t pin, uint8_t pinStatus);
 
 Description
-In the status-variable of the shiftregister the pin is set to pinStatus (1 or 0) and the function then calls byte2shiftregister with the new status as the parameter. Finally, the function returns the new status (see GetShiftStatus).
+Sets the pin of the shiftregister to high (pinStatus = 1) or low (pinStatus = 0) and returns the current state of the shiftregister as a byte (see getShiftStatus)
