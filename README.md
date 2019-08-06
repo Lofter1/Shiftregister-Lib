@@ -33,7 +33,8 @@ Shiftregister output-pins
 
     uint8_t setShiftregister(uint8_t data);
 
-Description  
+Description
+
 Writes the byte (the uint8_t) into the shiftregister, starting with the right bit (Q7) going to the left bit (Q0) and returns the status of the shiftregister (see getShiftStatus).
 
 **getShiftStatus**
@@ -41,6 +42,7 @@ Writes the byte (the uint8_t) into the shiftregister, starting with the right bi
     uint8_t getShiftStatus();
 
 Description
+
 Returns the current status of the shiftregister as a byte (uint8_t), where the left bit is Q0 and the right bit Q7.
 
 **setPin**
@@ -48,4 +50,5 @@ Returns the current status of the shiftregister as a byte (uint8_t), where the l
     uint8_t setPin(uint8_t pin, uint8_t pinStatus);
 
 Description
+
 Sets the pin of the shiftregister to high (pinStatus = 1) or low (pinStatus = 0) and returns the current state of the shiftregister as a byte (see getShiftStatus)
